@@ -42,7 +42,7 @@ vector<vector<int>> calculateAttacks(const vector<vector<char>> &field) {
                 }
                 for (size_t k = 1; k <= min(field.size() - i - 1, j); ++k) {
                     ++attacks[i + k][j - k];
-                    if (field[i + k][j + k] != '0') break;
+                    if (field[i + k][j - k] != '0') break;
                 }
                 break;
             case 'K':
@@ -96,7 +96,7 @@ vector<vector<int>> calculateAttacks(const vector<vector<char>> &field) {
                 }
                 for (size_t k = 1; k <= min(field.size() - i - 1, j); ++k) {
                     ++attacks[i + k][j - k];
-                    if (field[i + k][j + k] != '0') break;
+                    if (field[i + k][j - k] != '0') break;
                 }
                 break;
             case 'R':
@@ -182,6 +182,7 @@ void solve(vector<vector<char>> &field, string pieces, size_t index = 0) {
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
     while (true) {
         int n, m;
         cin >> n >> m;
