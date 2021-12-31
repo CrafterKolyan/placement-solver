@@ -11,3 +11,6 @@ Steam Store Page: https://store.steampowered.com/app/700920/Placement
 
 ## Example
 ![Example of usage](screenshot.png)
+
+## License
+The code is under MIT License.
